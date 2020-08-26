@@ -7,15 +7,20 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=11" };
 static const char dmenufont[]       = "monospace:size=11";
-static const char col_gray1[]       = "#F76DFD"; /* purple */
-static const char col_gray2[]       = "#FF3900"; /* red */
-static const char col_gray3[]       = "#0036E6"; /* blue */
-static const char col_gray4[]       = "#20FA00"; /* green */
-static const char col_cyan[]        = "#E3AA0B"; /* orange */
+static const unsigned int gappih    = 5;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 5;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 5;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 5;       /* vert outer gap between windows and screen edge */
+static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
+static const char col_gray1[]       = "#293241"; /* BG normal */
+static const char col_gray2[]       = "#293241"; /* BG selected */
+static const char col_gray3[]       = "#293241"; /* Border normal */
+static const char col_gray4[]       = "#EE6C4D"; /* Border selected */
+static const char col_cyan[]        = "#E0FBFC"; /* FG font */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_cyan, col_gray1, col_gray2 },
+	[SchemeSel]  = { col_cyan, col_gray4, col_gray4  },
 };
 
 static const unsigned int gappx     = 10;        /* gap pixel between windows */
@@ -40,9 +45,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "<t>",      tile },    /* first entry is default */
+	{ "<f>",      NULL },    /* no layout function means floating behavior */
+	{ "<m>",      monocle },
 };
 
 /* key definitions */

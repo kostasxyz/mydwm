@@ -7,11 +7,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=11" };
 static const char dmenufont[]       = "monospace:size=11";
-static const char col_gray1[]       = "#1e282f";
-static const char col_gray2[]       = "#eb8e45";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#1e282f";
+static const char col_gray1[]       = "#F23DBC";
+static const char col_gray2[]       = "#24EFF2";
+static const char col_gray3[]       = "#F52A00";
+static const char col_gray4[]       = "#39A608";
+static const char col_cyan[]        = "#A65D29";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },

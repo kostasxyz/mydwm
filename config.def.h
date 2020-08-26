@@ -14,11 +14,9 @@ static const char col_gray4[]       = "#EE6C4D"; /* Border selected */
 static const char col_cyan[]        = "#E0FBFC"; /* FG font */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray1, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_cyan, col_gray4, col_gray4  },
+	[SchemeNorm] = { col_cyan, col_gray1, col_gray2 },
+	[SchemeSel]  = { col_cyan, col_gray1, col_gray4  },
 };
-
-static const unsigned int gappx     = 10;        /* gap pixel between windows */
 
 /* tagging */
 static const char *tags[] = { "I", "II", "III", "IV", "V" };
